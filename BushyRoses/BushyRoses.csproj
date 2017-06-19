@@ -201,6 +201,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angularjs\html\mainPage.html" />
+    <Content Include="Angularjs\js\app.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -1029,8 +1031,6 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angularjs\html\" />
-    <Folder Include="Angularjs\js\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
