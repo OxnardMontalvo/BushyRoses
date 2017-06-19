@@ -24,14 +24,6 @@ namespace BushyRoses.Models {
 		public ICollection<Flyer> Flyers { get; set; }
 	}
 
-	//public class AdvertUser : AppUser {
-	//	public string Name { get; set; }
-	//	public string Address { get; set; }
-	//	public string PostalCode { get; set; }
-	//	public string County { get; set; }
-	//	public ICollection<Flyer> Flyers { get; set; }
-	//}
-
 	public class AppDB : IdentityDbContext<AppUser> {
 		public AppDB() : base("BushyRosesDB", throwIfV1Schema: false) { }
 
@@ -54,5 +46,14 @@ namespace BushyRoses.Models {
 		public int ID { get; set; }
 		public string Name { get; set; }
 		public ICollection<Flyer> Flyers { get; set; }
+	}
+
+
+	public class AddUserViewModel {
+		public string Name { get; set; }
+		public string Address { get; set; }
+		public string Email { get; set; }
+		public string PostalCode { get; set; }
+		public string County { get; set; }
 	}
 }
