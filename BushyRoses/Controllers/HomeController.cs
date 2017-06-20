@@ -36,6 +36,7 @@ namespace BushyRoses.Controllers {
 			pass = GeneratePassword();
 			pass = GeneratePassword();
 			pass = GeneratePassword();
+			GetUsers();
 			return View();
 		}
 
@@ -54,7 +55,7 @@ namespace BushyRoses.Controllers {
 
 		[HttpPost]
 		public JsonResult GetUsers() {
-			var users = DB.Users.Include(x => x.Flyers).ToList();
+			var users = DB.Users.Include(x => x.Flyers).ToList().Where(x => UserManager.IsInRole(x.Id, "User")).ToList();
 			return Json(users);
 		}
 
