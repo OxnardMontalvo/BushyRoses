@@ -109,12 +109,13 @@ namespace BushyRoses.Controllers {
 						PostalCode = vm.PostalCode,
 						County = vm.County
 					};
+					user.Flyers.Add(flyer);
 					var result = await UserManager.CreateAsync(user, GeneratePassword());
 					if ( result.Succeeded ) {
 						UserManager.AddToRole(user.Id, "User");
-                        await DB.SaveChangesAsync();
-                        return Json("Adding...");
-                    }
+						await DB.SaveChangesAsync();
+						return Json("Adding...");
+					}
 				} else {
 					return Json("Error: C07321AE");
 				}
