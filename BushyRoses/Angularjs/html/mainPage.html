@@ -26,11 +26,11 @@
                 <div class="ma-center ma-wrap-padding">
                     <form>
                         <div class="form-group">
-                            <input ng-model="vm.user.Namn" class="form-control input-lg" type="text" placeholder="Namn" />
-                            <input ng-model="vm.user.Adress" class="form-control input-lg" type="text" placeholder="Adress" />
-                            <input ng-model="vm.user.Ort" class="form-control input-lg" type="text" placeholder="Ort" />
-                            <input ng-model="vm.user.Postnr" class="form-control input-lg" type="text" placeholder="Post nummer" />
-                            <input ng-model="vm.user.Epost" class="form-control input-lg" type="text" placeholder="Epost" />
+                            <input ng-model="vm.user.Name" class="form-control input-lg" type="text" placeholder="Namn" />
+                            <input ng-model="vm.user.Address" class="form-control input-lg" type="text" placeholder="Adress" />
+                            <input ng-model="vm.user.County" class="form-control input-lg" type="text" placeholder="Ort" />
+                            <input ng-model="vm.user.PostalCode" class="form-control input-lg" type="text" placeholder="Post nummer" />
+                            <input ng-model="vm.user.Email" class="form-control input-lg" type="text" placeholder="Epost" />
                         </div>
                         <input ng-click="vm.readNoticeOfIntrestForm()" type="submit" class="ma-btn-lg btn-success" value="Anmäl dig" />
                     </form>
@@ -38,12 +38,4 @@
             </div>
         </div>
     </div>
-</div>
-
-<div>
-    <p>{{vm.user.Namn}}</p>
-    <p>{{vm.user.Adress}}</p>
-    <p>{{vm.user.Ort}}</p>
-    <p>{{vm.user.Postnr}}</p>
-    <p>{{vm.user.Epost}}</p>
 </div>

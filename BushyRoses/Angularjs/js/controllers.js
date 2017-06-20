@@ -9,20 +9,12 @@ angular.module("app")
     var vm = this;
 
     vm.user = {};
-    var users = [];
-
     vm.readNoticeOfIntrestForm = function () {
-        users.push(vm.user);
-        console.log(users);
 
-        //$http.post("HomeController/AddUser", vm.user)
-        //.then(function (response) {
-
-        //}), function (error) {
-
-        //}.finally(function () {
-
-        //});
+        $http.post("Home/AddUser", vm.user)
+        .then(function (response) {
+            console.log(response.data);
+        }), function (error) { };
     }
 });
 
