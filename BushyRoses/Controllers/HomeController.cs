@@ -112,12 +112,9 @@ namespace BushyRoses.Controllers {
 					var result = await UserManager.CreateAsync(user, GeneratePassword());
 					if ( result.Succeeded ) {
 						UserManager.AddToRole(user.Id, "User");
-						if ( await DB.SaveChangesAsync() > 0 ) {
-							return Json(result.Succeeded);
-						} else {
-							return Json("Error: FEE77E");
-						}
-					}
+                        await DB.SaveChangesAsync();
+                        return Json("Adding...");
+                    }
 				} else {
 					return Json("Error: C07321AE");
 				}
